@@ -1,0 +1,57 @@
+Matei Rares Andrei
+315CC
+
+Problema 1
+Timp de implementare - 16 ore
+Rezolvare:
+Dupa ce am citit textul l-am modificat adaugand cate un rand pentru highlight
+dupa fiecare rand. Apoi am eliminat spatiile in plus din text folosind o
+functie. Astfel, acum pot fi cautate secventele cheie din text folosind
+functii precum strstr, cuvintele fiind despartite doar de un singur spatiu.
+Functia folosita pentru stergerea spatiilor retine si 'coordonatele' acestora
+(linia, pozitia de inceput si numarul acestora).
+Dupa am cautat secventele cheie in text folosind o functie. In cazul in care
+am gasit una, aplicam highlight-ul.
+Dupa ce au fost subliniate toate secventele cheie din text, folosind
+'coordonatele' aflate anterior, sunt reintroduse in text toate spatiile sterse
+(sau caracterele '_' in cazul in care trebuie completat highlight-ul unei
+secvente cheie).
+In final, dupa afisarea textului cu highlight-ul aplicat, este eliberata
+memoria alocata dinamic.
+
+Problema 2
+Timp de implementare - 5 ore
+Rezolvare:
+Am folosit o functie pentru citirea cuvintelor din dictionar si numarul
+acestora. Apoi am citit cuvant cu cuvant textul pentru care trebuie aplicat
+autocomplete-ul. Daca primul caracter nu este litera, atunci am citit un semn
+de punctuatie si este afisat. Altfel, este verificat ultimul caracter.
+Daca este *, atunci i se sterge * de la final si este cautat in dictionar.
+In cazul in care este gasit ii este crescuta prioritatea, altfel este adaugat
+la finalul dictionarului cu prioritatea 1. Apoi este afisat cuvantul citit.
+Daca cuvantul citit nu are * la final, atunci este cautat in dictionar un
+cuvant care sa il aiba ca prefix pe cel citit. In caz ca am gasit un astfel
+de cuvant, acesta este afisat si ii este crescuta prioritatea. Altfel,
+cuvantul citit este adaugat la finalul dictionarului cu prioritatea 1 si
+este afisat. La final este eliberata memoria alocata pentru dictionar si
+cuvintele acestuia.
+
+Problema 3
+Timp de implementare - 10 ore
+Rezolvare:
+Pentru operatia xor am facut o functie care compara bitii de pe aceeasi
+pozitie din 2 numere. Daca sunt identici atunci in rezultatul, initial 0,
+nu este modificat(1^1=0, 0^0=0). Daca sunt diferiti, atunci este retinut
+1 in bitul din rezultat de pe pozitia respectiva.
+
+Pentru rotatia la stanga am facut o functie in care
+am redus numarul de rotatii ce trebuie facute
+pentru a ajunge la rezultatul dorit, ajungand la 3 cazuri.
+Fiecare caz a fost rezolvat folosind operatia de interschimbare.
+
+Pentru interschimbarea celor 2 biti am facut o functie in care am calculat
+ce biti trebuie schimbati in numar si am folosit o functie auxiliara pentru
+acest proces.
+
+Pentru adunare am facut o functie in care parcurg numerele bit cu bit
+si realizez calculul si cu ajutorul unei variabile ce retine transportul.
